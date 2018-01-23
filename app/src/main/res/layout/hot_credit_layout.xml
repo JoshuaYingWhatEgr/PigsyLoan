@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/hot_credit_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bank_card" />
+
+    <TextView
+        android:id="@+id/hot_credit_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/hot_credit_image"
+        android:paddingTop="10dp"
+        android:text="VISA全球支付信用卡(海淘版)" />
+
+    <TextView
+        android:id="@+id/credit_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hot_credit_tv"
+        android:layout_toRightOf="@id/hot_credit_image"
+        android:singleLine="true"
+        android:text="任意币种消费，均豁免货币兑换手续费。任意..." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/credit_detail"
+        android:layout_toEndOf="@+id/hot_credit_image"
+        android:text="29574人已申请"
+        android:textSize="10dp" />
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--<com.example.joshuayingwhat.pigsyloan.widget.VerticalRefresh-->
+    <!--android:id="@+id/refresh_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <include layout="@layout/slideshow" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#B0AFAD" />
+
+    <com.example.joshuayingwhat.pigsyloan.widget.CustomGridView
+        android:id="@+id/loan_mode"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:columnWidth="90dip"
+        android:gravity="center"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dip" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#B0AFAD" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/loans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10sp"
+            android:text="热门产品" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:text="17时00分 139****424在杏仁钱包借款1000元"
+                android:textSize="10sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--第三方上拉刷新下拉加载控件-->
+    <com.cjj.MaterialRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:progress_show_arrow="false"
+        app:progress_show_circle_backgroud="false"
+        app:progress_text_visibility="invisible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_hot_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.cjj.MaterialRefreshLayout>
+</LinearLayout>
